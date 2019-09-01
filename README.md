@@ -8,7 +8,7 @@ Follow the instructions over here - https://hub.docker.com/_/oracle-database-ent
 ## Login ito your docker account
 docker login
 ## Create kubernetes secret for docker registry 
-Follow the instruction on this page to create kubernetes secret for docker registry. Command you will use is, 
+Follow the instruction on this page - https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/ -  to create kubernetes secret for docker registry. Command you will use is, 
 kubectl create secret generic regcred \
     --from-file=.dockerconfigjson=<path/to/.docker/config.json> \
     --type=kubernetes.io/dockerconfigjson
