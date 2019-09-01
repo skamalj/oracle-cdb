@@ -1,7 +1,8 @@
 # Kubernetes deployment file for creating oracle CDB and PDB
 ## Create GKE cluster 
+```
 gcloud container clusters create oraclecdb --num-nodes 2 --machine-type n1-highmem-2 --region asia-south1-a
-
+```
 ## Clone the repository
 ## Enable oracle docker hub registry for your account 
 Follow the instructions over here - https://hub.docker.com/_/oracle-database-enterprise-edition
