@@ -30,6 +30,7 @@ IP = get kubernetes public IP from console
 port = port you egt from above command , will be in range 3xxxx
 userid = sys
 password = Oradoc_db1
+service_name = MYCDB.kamalsblog.com
 ```
 
 ## You can also connect using port-forward on svc, say using port 1521
@@ -38,4 +39,6 @@ In that case
 IP = localhost
 port = 1521
 user/pass same as above.
+service_name = MYCDB.kamalsblog.com
 ```
+[This page](https://hub.docker.com/_/oracle-database-enterprise-edition) details all the connectivity and configuration options available.
