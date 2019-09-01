@@ -1,4 +1,4 @@
-# Kubernetes deployment file for creating oracle CDB and PDB
+# Creating oracle CDB/PDB instance on GKE
 ## Create GKE cluster 
 ```
 gcloud container clusters create oraclecdb --num-nodes 2 --machine-type n1-highmem-2 --region asia-south1-a
