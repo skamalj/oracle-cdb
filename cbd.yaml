@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: oradb
+spec:
+  type: NodePort
+  selector:
+    app: oradb
+  ports:
+  -  protocol: TCP
+     targetPort: 1521
+     port: 1521
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myoracledb
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+      app: oradb
+ template:
+   metadata:
+     name: oradb
+     labels:
+       app: oradb
+   spec:
+     imagePullSecrets:
+     - name: regcred
+     containers:
+     - name: oradbd
+       image: store/oracle/database-enterprise:12.2.0.1
+       env:
+       - name: DB_SID
+         value: MYCDB
+       - name: DB_PDB
+         value: MYPDB1
+       - name: DB_DOMAIN
+         value: kamalsblog.com
+       ports:
+       - containerPort: 1521
