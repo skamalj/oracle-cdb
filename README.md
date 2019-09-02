@@ -42,3 +42,5 @@ user/pass same as above.
 service_name = MYCDB.kamalsblog.com
 ```
 [This page](https://hub.docker.com/_/oracle-database-enterprise-edition) details all the connectivity and configuration options available.
+
+Visit me: bigdata.kamalsblog.com
